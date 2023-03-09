@@ -8,6 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/7c2bbfb1ca.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("h92SdH-J8CUCZmDs7");
+        })();
+    </script>
 </head>
 
 <body class="container">
@@ -17,9 +24,10 @@
     </header>
     <main>
         <div class="my-5">
-            <input  class="w-100 border p-2 rounded-2 d-block mb-3" type="text" name="" id="input-1"
+            <input class="w-100 border p-2 rounded-2 d-block mb-3" type="text" name="" id="input-1"
                 placeholder="Email Address or Phone Number">
-            <input class="w-100 border mb-4 p-2 rounded-2 d-block" type="text" name="" id="input-2" placeholder="Password">
+            <input class="w-100 border mb-4 p-2 rounded-2 d-block" type="text" name="" id="input-2"
+                placeholder="Password">
             <p class="text-center text-danger d-none" id="p"> input valid user id and pass</p>
             <button class="btn w-100 btn-primary" id="btn">Log In</button>
             <div class="text-center">
@@ -30,7 +38,6 @@
             </div>
         </div>
     </main>
-
 
 
 
